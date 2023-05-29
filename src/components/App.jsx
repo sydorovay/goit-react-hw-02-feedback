@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 import Statistics from './statistics/Statistics';
 import FeedbackOptions from './feedbackOptions/FeedbackOptions';
-
-const Section = ({ title, children }) => (
-  <div>
-    <h2>{title}</h2>
-    {children}
-  </div>
-);
-
+import Section from './section/Section';
 class App extends Component {
   state = {
     good: 0,
@@ -24,7 +17,7 @@ class App extends Component {
 
     return (
       <div>
-        <Section title="Please leave Feedback">
+        <Section title="Please leave feedback">
           <FeedbackOptions
             options={feedbackOptions}
             onLeaveFeedback={this.handleFeedback}
