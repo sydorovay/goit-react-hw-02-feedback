@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
+import Statistics from './statistics/Statistics';
 
-const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
-  <div>
-    <p>Good: {good}</p>
-    <p>Neutral: {neutral}</p>
-    <p>Bad: {bad}</p>
-    <p>Total Feedback: {total}</p>
-    <p>Positive Feedback Percentage: {positivePercentage}%</p>
-  </div>
-);
+
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <div>
@@ -42,7 +35,7 @@ class App extends Component {
 
     return (
       <div>
-        <Section title="Leave Feedback">
+        <Section title="Please leave Feedback">
           <FeedbackOptions
             options={feedbackOptions}
             onLeaveFeedback={this.handleFeedback}
